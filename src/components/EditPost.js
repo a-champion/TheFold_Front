@@ -9,7 +9,6 @@ const EditPost = (props) => {
     let [editPostBody, setEditPostBody] = useState();
     let [editPostBy, setEditPostBy] = useState();
     let [editSwitch, setEditSwitch] = useState(false);
-    let [post, setPost] = useState();
 
     const handleEditPostTitleChange = (event) => {
         setEditPostTitle(event.target.value);
@@ -26,13 +25,13 @@ const EditPost = (props) => {
 
     const handleEditPostForm = (event, postData) => {
         event.preventDefault();
-        axios.put(`http://localhost:8080/posts/${postData.id}`, {
+        axios.put(`https://the-fold-api.herokuapp.com/posts/${postData.id}`, {
             title: editPostTitle,
             contentURL: editPostURL,
             body: editPostBody,
             postedBy: editPostBy,
         }).then(() => {
-            axios.get('http://localhost:8080/posts').then((response) => {
+            axios.get('https://the-fold-api.herokuapp.com/posts').then((response) => {
             });
         });
         props.toggleSwitch();

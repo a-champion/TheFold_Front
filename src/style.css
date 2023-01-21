@@ -7,7 +7,7 @@ body {
 }
 
 .nav {
-    background: #333;
+    background: #282c45;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -34,10 +34,34 @@ body {
     padding: .25rem;
 }
 
-.nav li.active {
+.nav li a.active {
     background-color: #555;
 }
 
-.nav li.hover {
+.nav li a.hover {
     background-color: #777;
+}
+
+
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 350px);
+    grid-auto-rows: 150px; */
+}
+.duel {
+
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-gap: 20px;
+        /* grid-auto-rows: 150px; */
+    }
+    .duel {
+    
+    }
+
 }
