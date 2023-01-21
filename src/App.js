@@ -62,7 +62,7 @@ import Channels from './components/Channels';
             console.log(response.data);
         })
     });
-    tossACointToYourSwitcher();
+    getPosts();
     formSwitch();
   }
 
